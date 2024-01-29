@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1s linear;
   }
 }
 
@@ -37,7 +37,55 @@
   }
 }
 
+@keyframes identifier {
+  0% {filter: drop-shadow(0 0 0px #41b883);}
+  50% {filter: drop-shadow(0 0 20px #41b883);}
+  100% {filter: drop-shadow(0 0 0px #41b883);}
+}
 
-.App-logo {
-  fill: green;
+@keyframes textFilter {
+  0% {
+    background: repeating-linear-gradient(90deg, #41b883, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: repeating-linear-gradient(90deg, #ffffff, #41b883, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  100% {
+    background: repeating-linear-gradient(90deg, #ffffff, #ffffff, #41b883);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+#vue {
+  animation: identifier 3s linear infinite;
+}
+
+.textVue {
+  animation: textFilter .2s linear infinite;
+  text-transform: uppercase;
+}
+
+.rub {
+  font-size: 12px;
+  margin: 4px 0 0;
+  color: #41b88341;
+}
+
+button {
+  padding: 10px;
+  font-size: 23px;
+  cursor: pointer;
+  background-color: #41b883;
+  color: white;
+  border: solid 2px white;
+}
+
+span {
+  text-transform: uppercase;
 }
