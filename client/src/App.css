@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 1s linear;
+    animation: App-logo-spin infinite .8s linear;
   }
 }
 
@@ -74,7 +74,7 @@
 .rub {
   font-size: 12px;
   margin: 4px 0 0;
-  color: #41b88341;
+  color: #41b8831a;
 }
 
 button {
