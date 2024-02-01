@@ -5,9 +5,9 @@ import { useSelector, useDispatch } from 'react-redux';
 
 export default function Counter() {
   const uses = useSelector(state => state.counter)
-  const count = (uses < 0) ? 0 : uses;
+  const count = uses;
   const dispatch = useDispatch();
-  const incrementer = 10;
+  const incrementer = 100;
 
   return (
         <div>

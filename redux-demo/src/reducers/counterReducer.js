@@ -1,13 +1,11 @@
-
-
 const counterReducer = (state = 0, action) => {
     switch (action.type) {
       case 'INCREMENT':
         return state + action.payload;
       case 'DECREMENT':
-        return state - action.payload;
+        return (state - action.payload <= 0) ? state = 0 : state - action.payload;
       default:
-        return (state < 0) ? 0 : state;
+        return state;
     }
   }
   
